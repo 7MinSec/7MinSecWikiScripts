@@ -10,8 +10,8 @@ a wiki article, so you can copy/paste with confidence.
 
 | Directory | What lives here |
 |-----------|-----------------|
-| [`labs/`](labs/) | Deploy and configure lab/practice environments (e.g. Exegol, GOAD, AD targets). |
-| [`dropboxes/`](dropboxes/) | Automate deploying Proxmox VMs used as pentest dropboxes. |
+| [`labs/`](labs/) | Deploy and configure lab/practice environments (e.g. GOAD, AD targets). |
+| [`dropboxes/`](dropboxes/) | Automate deploying Proxmox VMs used as pentest dropboxes (e.g. Exegol). |
 | [`maintenance/`](maintenance/) | System upkeep — updates, cleanup, backups, snapshots. |
 | [`pentesting/`](pentesting/) | Offensive tooling and helpers used during engagements. |
 
@@ -19,4 +19,4 @@ a wiki article, so you can copy/paste with confidence.
 
 | Script | Purpose | Wiki |
 |--------|---------|------|
-| [`labs/install-exegol.sh`](labs/install-exegol.sh) | One-shot [Exegol](https://exegol.com) installer for Kali. | [7minsec.wiki/software/exegol](https://7minsec.wiki/software/exegol/) |
+| [`dropboxes/install-exegol.sh`](dropboxes/install-exegol.sh) | One-shot [Exegol](https://exegol.com) installer for Kali. | [7minsec.wiki/software/exegol](https://7minsec.wiki/software/exegol/) |
