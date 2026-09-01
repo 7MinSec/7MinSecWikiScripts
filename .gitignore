@@ -212,3 +212,43 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ─────────────────────────────────────────────────────────────────────
+# Pentest engagement data — NEVER commit
+# These scripts are safe to publish; what they PRODUCE is not. Output
+# identifies clients and contains crackable credential material.
+# ─────────────────────────────────────────────────────────────────────
+
+# Saved sessions — domain, username and password in PLAINTEXT
+adlinpen_creds.json
+adpentool_creds.json
+*_creds.json
+
+# adlinpen / nxcenum write everything else under output/ (users, hashes,
+# shares, hostnames, screenshots, scan XML, module_log.json). No leading
+# slash, so this matches an output/ dir at any depth.
+output/
+loot/
+
+# Credential material
+*.ccache
+*.kirbi
+krb5cc_*
+*.ntds
+*.secrets
+*.potfile
+*hashes*.txt
+
+# BloodHound collector — dropped in the CWD, not output/
+*_bloodhound.zip
+*BloodHound.zip
+
+# pre2k -save writes its results to the CWD
+pre2k*.txt
+
+# Scan / screenshot artifacts, if ever run outside output/
+*.nmap
+*.gnmap
+ips-scan*
+screenshots/
+gowitness.sqlite3
