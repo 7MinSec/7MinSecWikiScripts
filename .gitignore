@@ -1,4 +1,4 @@
-# Claude Code working notes — local only, never publish
+# Claude Code working notes - local only, never publish
 CLAUDE.md
 .claude/
 
@@ -214,12 +214,12 @@ marimo/_lsp/
 __marimo__/
 
 # ─────────────────────────────────────────────────────────────────────
-# Pentest engagement data — NEVER commit
+# Pentest engagement data - NEVER commit
 # These scripts are safe to publish; what they PRODUCE is not. Output
 # identifies clients and contains crackable credential material.
 # ─────────────────────────────────────────────────────────────────────
 
-# Saved sessions — domain, username and password in PLAINTEXT
+# Saved sessions - domain, username and password in PLAINTEXT
 adlinpen_creds.json
 adpentool_creds.json
 *_creds.json
@@ -239,7 +239,7 @@ krb5cc_*
 *.potfile
 *hashes*.txt
 
-# BloodHound collector — dropped in the CWD, not output/
+# BloodHound collector - dropped in the CWD, not output/
 *_bloodhound.zip
 *BloodHound.zip
 
@@ -252,3 +252,43 @@ pre2k*.txt
 ips-scan*
 screenshots/
 gowitness.sqlite3
+
+# ---------------------------------------------------------------------------
+# hashcrack.ps1 (pentesting/) - never commit secrets, local paths, or
+# cracking artifacts. Folded in from the tool's own .gitignore when it moved
+# into the repo. NOTE: these globs apply repo-wide.
+# ---------------------------------------------------------------------------
+
+# Local config (contains your machine's hashcat / wordlist paths)
+hashcrack.config.json
+
+# Pause/resume checkpoints + per-batch progress
+.hashcrack/
+*.restore
+*.progress
+
+# Hash inputs and anything derived from them. NEVER publish these.
+hashes/
+*.hash
+*.ntlm
+*.hccapx
+*.22000
+
+# Cracked results / hashcat state (*.potfile already covered above)
+*.pot
+*.cracked
+*.outfile
+
+# Wordlists, rules & archives - big and/or licensed, keep them out of the repo
+*.txt
+*.lst
+*.dict
+*.gz
+*.7z
+*.zip
+passwords/
+wordlists/
+
+# ...but never let the blanket rules above swallow the docs
+!*.README.md
+!README.md

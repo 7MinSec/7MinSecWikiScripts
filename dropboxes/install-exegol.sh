@@ -1,16 +1,25 @@
 #!/bin/bash
 # ============================================================================
-#  install-exegol.sh — one-shot Exegol installer for Kali
+#  install-exegol.sh - one-shot Exegol installer for Kali
+#  Version: 1.0
 #
 #  Brought to you by 7 Minute Security  •  https://7MinSec.com
 #  Built with lots of help from Claude (Anthropic).
 #  More scripts & wiki: https://7MinSec.wiki
+#
+#  DISCLAIMER: Provided as-is, with no warranty of any kind. Use at your own
+#  risk and only where you are authorized to do so. 7 Minute Security is not
+#  responsible for anything positive or negative that happens as a result of
+#  running this script.
 # ============================================================================
 #
 # Follows https://7minsec.wiki/software/exegol/ and https://docs.exegol.com/first-install
 #
 # Run as a regular user (NOT root). The user must have sudo rights.
 # Re-running is safe; each step checks for prior install before acting.
+#
+# Version history:
+#   1.0  (2026-10-28)  Initial published version.
 
 set -u
 
@@ -69,12 +78,12 @@ install_docker() {
     curl -fsSL "$DOCKER_INSTALL_URL" | sh \
         || die "Docker install script failed."
     info "Docker installed: $(docker --version 2>/dev/null || echo 'version unknown')"
-    warn "Exegol requires standard (rootful) Docker — do NOT enable rootless mode."
+    warn "Exegol requires standard (rootful) Docker - do NOT enable rootless mode."
 }
 
 install_exegol() {
     if pipx list 2>/dev/null | grep -q '^\s*package exegol '; then
-        info "Exegol already installed via pipx — upgrading..."
+        info "Exegol already installed via pipx - upgrading..."
         pipx upgrade exegol || warn "pipx upgrade exegol returned non-zero."
         return 0
     fi
