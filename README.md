@@ -20,7 +20,7 @@ a wiki article, so you can copy/paste with confidence.
 | Script | Purpose | Wiki |
 |--------|---------|------|
 | [`dropboxes/install-exegol.sh`](dropboxes/install-exegol.sh) | One-shot [Exegol](https://exegol.com) installer for Kali. | [7minsec.wiki/software/exegol](https://7minsec.wiki/software/exegol/) |
-| [`pentesting/Nessus_SortyMcSortleton.ps1`](pentesting/Nessus_SortyMcSortleton.ps1) | Turn a raw Nessus CSV export into a deduplicated, severity-sorted, color-coded Excel report. | [7minsec.wiki/software/nessus](https://7minsec.wiki/software/nessus/) |
 | [`pentesting/hashcrack.ps1`](pentesting/hashcrack.ps1) | Hand-it-to-anyone hashcat bootstrapper + pausable cracking runner for Windows. | [7minsec.wiki/pentesting/internal/hashcat](https://7minsec.wiki/pentesting/internal/hashcat/) |
 | [`pentesting/install-nessus.sh`](pentesting/install-nessus.sh) | Fast one-shot installer: fetch the latest Nessus `.deb` from Tenable and install it (Debian/Kali/Ubuntu). | [7minsec.wiki/software/nessus](https://7minsec.wiki/software/nessus/) |
 | [`pentesting/nessus-setup.sh`](pentesting/nessus-setup.sh) | Menu-driven Nessus lifecycle helper: install, register, add admin user, restart, logs. | [7minsec.wiki/software/nessus](https://7minsec.wiki/software/nessus/) |
+| [`pentesting/Nessus_SortyMcSortleton.ps1`](pentesting/Nessus_SortyMcSortleton.ps1) | Turn a raw Nessus CSV export into a deduplicated, severity-sorted, color-coded Excel report. | [7minsec.wiki/software/nessus](https://7minsec.wiki/software/nessus/) |
